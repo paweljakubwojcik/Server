@@ -14,6 +14,10 @@ app.set('view engine', 'handlebars')
 //seting static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.get('/',(req,res)=>{
+res.render('index',{layout:false})
+})
+
 app.get('/fileTree',(req,res)=>{
     let data = JSON.stringify(fileTree)
     res.send(data)
