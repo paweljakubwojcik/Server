@@ -28,7 +28,7 @@ function createListElement(item,lista)
         let li = document.createElement('li')
         let ul = document.createElement('ul')
         let p = document.createElement('p')
-        p.innerHTML = item[0].split('\\')[1]
+        p.innerHTML = item[0].split('/')[1]
         ul.appendChild(p)
         li.appendChild(ul)
         lista.appendChild(li)
