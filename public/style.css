@@ -1,0 +1,135 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0C7D09;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 3px 5px rgba(0, 47, 7, 0.83);
+  height: 100vh;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: minmax(200px, 4fr) 5fr;
+  grid-auto-rows: 2fr 3fr;
+      grid-template-areas: 'img header' 'img main';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.head {
+  margin: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.head header {
+  font-family: 'Oleo Script', cursive;
+  font-size: 72px;
+}
+
+.head p {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  margin: 10px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.main header {
+  width: 80%;
+}
+
+.main ul {
+  padding: 10px 0 0;
+  margin: 0;
+  font-size: .8em;
+  position: relative;
+}
+
+.main ul::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  display: block;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  background-color: white;
+}
+
+.main ul li {
+  display: block;
+  position: relative;
+  margin: 0 0 0 10px;
+  padding: 15px 10px 0;
+}
+
+.main ul li::after {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 3px solid white;
+}
+
+.main ul p {
+  font-size: larger;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+img {
+  margin: 10%;
+  width: 70%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  border-radius: 50%;
+  text-shadow: 3px 3px 5px black;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+        grid-template-areas: 'img header' 'main main';
+  }
+}
+/*# sourceMappingURL=style.css.map */
