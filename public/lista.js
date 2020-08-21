@@ -2,6 +2,8 @@ let lista = document.querySelector('.main > ul')
 
 let path = document.URL + 'fileTree';
 
+
+//get request to get the working three
 fetch(path)
     .then((response) => {
         return response.json()
