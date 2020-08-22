@@ -31,7 +31,7 @@ function createListElement(item, lista) {
 
         //tworzenie nagłówka
         let p = document.createElement('p') 
-        p.innerHTML = item.find((element) => !Array.isArray(element)).split('\\').reverse()[1] || 'MyFiles'; // na serwerze trzeba zamienić '\\' na '/'
+        p.innerHTML = item.find((element) => !Array.isArray(element)).split('/').reverse()[1] || 'MyFiles'; // na serwerze trzeba zamienić '\\' na '/'
         // znajdź element który jest stringiem -> podziel go na tablice -> odwróć tablice -> weź pierwszy element, jeśli jest pusty zastą 'working tree'
 
         let li = document.createElement('li')
