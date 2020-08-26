@@ -9,7 +9,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #0C7D09;
+  background-color: #539351;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 300;
   color: white;
@@ -22,7 +22,9 @@ body {
   display: grid;
   grid-auto-columns: 5fr 5fr;
   grid-auto-rows: 2fr 2fr 1fr;
-      grid-template-areas: 'img header' 'img main' 'img main';
+      grid-template-areas: 'img header'
+ 'img main'
+ 'img main';
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -149,7 +151,9 @@ img {
 
 @media (max-width: 800px) {
   .wrapper {
-        grid-template-areas: 'img img' 'header header' 'main main';
+        grid-template-areas: 'img img'
+ 'header header'
+ 'main main';
     justify-items: center;
   }
   img {
