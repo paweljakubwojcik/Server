@@ -1,3 +1,5 @@
+
+
 let lista = document.querySelector('.main')
 let header = document.querySelector('.main > header')
 let path = document.URL + 'fileTree';
@@ -21,6 +23,7 @@ fetch(path)
 
 
 function createListElement(item, lista) {
+    
 
     if (!Array.isArray(item)) {
         let li = document.createElement('li')
@@ -28,12 +31,15 @@ function createListElement(item, lista) {
         lista.appendChild(li)
     }
     else {
-
+        
         //tworzenie nagłówka
         let p = document.createElement('p') 
-        p.innerHTML = item.find((element) => !Array.isArray(element)).split('/').reverse()[1] || 'MyFiles'; // na serwerze trzeba zamienić '\\' na '/'
-        // znajdź element który jest stringiem -> podziel go na tablice -> odwróć tablice -> weź pierwszy element, jeśli jest pusty zastą 'working tree'
-
+       // p.innerHTML = item.find((element) => !Array.isArray(element)).split('/').reverse()[1] || 'MyFiles'; // na serwerze trzeba zamienić '\\' na '/'
+        // znajdź element który jest stringiem -> podziel go na tablice -> odwróć tablice -> weź drugi element, jeśli jest pusty zastą 'working tree'
+        let title = item.find((element) => !Array.isArray(element))
+        if(title)
+        p.innerHTML = title.split('/').reverse()[1] || 'MyFiles';
+       
         let li = document.createElement('li')
         let ul = document.createElement('ul')
 
